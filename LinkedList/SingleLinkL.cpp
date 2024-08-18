@@ -1,6 +1,9 @@
 #include <iostream>
 using namespace std;
 
+// singly linkedList is a data structure containing a node
+// node consist of two parts: a data value and a pointer-> containg the address of the next node.
+
 class Node {
 public:
     int d;         // Data stored in the node
@@ -40,13 +43,14 @@ void insertFromTail(Node* &tail, int D) {
 
 void insertAtPosition(Node* &head,Node* &tail, int position, int D){
 
-    Node* temp = head ;
-    int count =1 ;
-
     if(position ==1){
         insertFromHead(head,D) ;
         return ;
     }
+    
+    Node* temp = head ;
+    int count =1 ;
+
 
     while (count < position-1) {
         temp =  temp->next ;
