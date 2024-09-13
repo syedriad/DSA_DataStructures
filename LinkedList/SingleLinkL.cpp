@@ -25,11 +25,10 @@ public:
 
         cout << "Memory is free for node for data " << deleted <<endl ;
     }
-
-
 };
 
 void insertFromHead(Node* &head, int D) {
+
     Node* newNode = new Node(D);  // Create a new node with given data
     newNode->next = head;         // Link the new node to the current head
     head = newNode;               // Update the head to be the new node
@@ -72,6 +71,7 @@ void insertAtPosition(Node* &head,Node* &tail, int position, int D){
 void deleteNode(int position, Node* &head, Node* &tail ){
 
     // for deleting the first node
+
     if (position == 1){
         Node* temp = head ;
         head= head ->next ;
